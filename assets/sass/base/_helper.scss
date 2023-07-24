@@ -24,4 +24,8 @@
   line-height: u.rem(22);
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+
+  &.left {
+    text-align: left;
+  }
 }

@@ -12,3 +12,7 @@ window.onscroll = () => {
     navbar.classList.remove("scrolled");
   }
 };
+
+$("#showMoreBtn").click(function () {
+  $(".services-wrapper").toggleClass("show");
+});
