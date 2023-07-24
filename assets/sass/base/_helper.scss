@@ -1,0 +1,27 @@
+@use "../utils" as u;
+
+.sub-title {
+  font-size: u.rem(45);
+  text-align: center;
+  color: u.$text-color;
+  letter-spacing: u.rem(0.9);
+  line-height: u.rem(60);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+
+  @include u.breakpoint-max(medium) {
+    font-size: u.rem(24);
+    letter-spacing: u.rem(0.48);
+    line-height: u.rem(35);
+  }
+}
+
+.common-description {
+  font-size: u.rem(14);
+  text-align: center;
+  color: u.$text-color;
+  letter-spacing: u.rem(0.7);
+  line-height: u.rem(22);
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+}

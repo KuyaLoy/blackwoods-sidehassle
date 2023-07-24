@@ -1,0 +1,190 @@
+@use "../utils" as u;
+
+main {
+  background-image: url(../images/hero/hero-bg.jpg);
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+  padding-top: u.rem(90);
+  @include u.breakpoint-max(medium) {
+    padding-top: u.rem(65);
+    background-size: 500%;
+    background-position: 62.5% top;
+  }
+  section {
+    max-width: u.rem(1140);
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+
+    &.hero {
+      display: flex;
+      align-items: center;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: 57.5%;
+        height: 200%;
+        background-color: rgba(255, 255, 255, 0.504);
+        backdrop-filter: blur(10px);
+        z-index: 0;
+
+        @include u.breakpoint-max(medium) {
+          display: none;
+        }
+      }
+      .content {
+        padding: u.rem(25);
+        max-width: u.rem(1140);
+        width: 100%;
+        margin: 0 auto;
+        position: relative;
+
+        .content-text {
+          h1 {
+            max-width: u.rem(585);
+            width: 100%;
+            font-family: "Poppins", sans-serif;
+            font-size: u.rem(55);
+            font-weight: 500;
+            letter-spacing: u.rem(1.1);
+            line-height: u.rem(75);
+            color: u.$text-color;
+            @include u.breakpoint-max(medium) {
+              max-width: unset;
+              text-align: center;
+              font-size: u.rem(38);
+              letter-spacing: u.rem(0.76);
+              line-height: u.rem(57);
+            }
+          }
+          .description {
+            max-width: u.rem(585);
+            width: 100%;
+            font-family: "Poppins", sans-serif;
+            font-size: u.rem(16);
+            font-weight: 300;
+            letter-spacing: u.rem(0.8);
+            line-height: u.rem(25);
+            color: u.$text-color;
+            margin-top: u.rem(30);
+            @include u.breakpoint-max(medium) {
+              max-width: unset;
+              text-align: center;
+              font-size: u.rem(18);
+              letter-spacing: u.rem(0.9);
+              line-height: u.rem(30);
+            }
+          }
+          .button-container {
+            margin-top: u.rem(30);
+            @include u.breakpoint-max(medium) {
+              margin-top: u.rem(128);
+            }
+            a {
+              font-family: "Poppins", sans-serif;
+              font-size: u.rem(16);
+              font-weight: 500;
+              margin-right: u.rem(20);
+              max-width: u.rem(205);
+              width: 100%;
+              display: inline-block;
+              padding: u.rem(15);
+              text-decoration: none;
+              border-radius: u.rem(24);
+              text-align: center;
+
+              @include u.breakpoint-max(medium) {
+                max-width: unset;
+                margin-right: unset;
+              }
+
+              &:nth-child(1) {
+                background-color: u.$background-color;
+                color: u.$primary-color;
+                outline: 1px solid u.$primary-color;
+                @include u.breakpoint-max(medium) {
+                  background-color: unset;
+                  outline: 1px solid u.$background-color;
+                  color: u.$background-color;
+                }
+              }
+              &:nth-child(2) {
+                background-color: u.$primary-color;
+                color: u.$background-color;
+
+                @include u.breakpoint-max(medium) {
+                  margin-top: u.rem(10);
+                }
+              }
+            }
+          }
+        }
+      }
+      max-width: unset;
+      min-height: calc(100vh - u.rem(90));
+      @include u.breakpoint-max(medium) {
+        min-height: calc(100vh - u.rem(60));
+      }
+    }
+    &.partners {
+      min-height: unset;
+      .partners__wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        @include u.breakpoint-max(medium) {
+          justify-content: center;
+          background-color: white;
+          padding-top: u.rem(25);
+        }
+        &__wrap {
+          width: 20%;
+          background-color: rgba(255, 255, 255, 0.3);
+          backdrop-filter: blur(u.rem(30));
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: u.rem(114);
+          border: 1px u.$background-color solid;
+
+          @include u.breakpoint-max(medium) {
+            all: unset;
+            height: u.rem(80);
+            width: 33.33%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+          @include u.breakpoint-max(medium) {
+            width: 50%;
+          }
+
+          img {
+            width: u.rem(118);
+            object-fit: cover;
+            @include u.breakpoint-max(medium) {
+              width: 70%;
+            }
+          }
+        }
+      }
+    }
+    &.services {
+      padding: u.rem(25);
+      padding-top: u.rem(100);
+      background-color: u.$background-color;
+
+      @include u.breakpoint-max(medium) {
+        padding-top: u.rem(87);
+      }
+
+      p.title-desc {
+        max-width: u.rem(602);
+        width: 100%;
+        margin: 0 auto;
+        margin-top: u.rem(15);
+      }
+    }
+  }
+}

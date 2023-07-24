@@ -1,0 +1,137 @@
+@use "../utils" as u;
+
+header {
+  min-height: u.rem(90);
+  background-color: u.$background-color;
+  position: fixed;
+  transform: 1s all ease;
+  z-index: 1;
+
+  &.scrolled {
+    @include u.breakpoint-min(medium) {
+      background-color: rgba(255, 255, 255, 0.504);
+      backdrop-filter: blur(u.rem(10));
+    }
+  }
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 u.rem(25);
+
+  @include u.breakpoint-max(medium) {
+    min-height: u.rem(65);
+  }
+
+  width: 100%;
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: u.rem(1140);
+    width: 100%;
+    margin: 0 auto;
+
+    .logo {
+      a {
+        img {
+          width: u.rem(203);
+          @include u.breakpoint-max(medium) {
+            width: u.rem(140);
+          }
+        }
+      }
+    }
+
+    .burger-menu {
+      display: none;
+      @include u.breakpoint-max(medium) {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+
+        .bar {
+          width: 25px;
+          height: 2px;
+          background-color: u.$secondary-color;
+          margin: 2px 0;
+          border-radius: 2px;
+          transition: transform 0.3s ease-in-out;
+
+          &:nth-child(3) {
+            width: 20px;
+            margin: 0 auto;
+            margin-top: 2px;
+          }
+        }
+      }
+    }
+    .menu {
+      @include u.breakpoint-min(large) {
+        display: flex !important;
+      }
+
+      @include u.breakpoint-max(medium) {
+        position: absolute;
+        display: none;
+        width: 100%;
+        right: 0;
+        left: 0;
+        top: 60px;
+        background-color: var(--secondary-background-color);
+        li {
+          padding: u.rem(10) 0px;
+        }
+        .call-us-mobile {
+          display: block !important;
+          text-align: center;
+          button {
+            padding: u.rem(15);
+            width: 100%;
+            border: none;
+            font-size: u.rem(14);
+            color: u.$background-color;
+            background-color: u.$primary-color;
+            text-transform: uppercase;
+            cursor: pointer;
+          }
+        }
+      }
+      li {
+        margin: u.rem(5) u.rem(25);
+        a {
+          color: u.$text-color;
+          font-size: u.rem(14);
+          text-decoration: none;
+          font-family: "Poppins", sans-serif;
+          letter-spacing: u.rem(0.28);
+        }
+        &.active {
+          color: u.$text-active-color;
+          font-weight: 500;
+        }
+      }
+      .call-us-mobile {
+        display: none;
+      }
+    }
+    .call-us {
+      @include u.breakpoint-max(medium) {
+        display: none;
+      }
+      button {
+        padding: u.rem(15);
+        width: u.rem(140);
+        border-radius: u.rem(49);
+        border: none;
+        font-size: u.rem(14);
+        color: u.$background-color;
+        background-color: u.$primary-color;
+        text-transform: uppercase;
+        cursor: pointer;
+      }
+    }
+  }
+}
