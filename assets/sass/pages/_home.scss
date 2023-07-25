@@ -20,6 +20,12 @@ main {
     &.hero {
       display: flex;
       align-items: center;
+      max-width: unset;
+      min-height: calc(100vh - u.rem(90));
+
+      @include u.breakpoint-max(medium) {
+        min-height: calc(100vh - u.rem(60));
+      }
 
       &::before {
         content: "";
@@ -35,11 +41,14 @@ main {
         }
       }
       .content {
-        padding: u.rem(25);
         max-width: u.rem(1140);
         width: 100%;
         margin: 0 auto;
         position: relative;
+
+        @include u.breakpoint-max(large) {
+          padding: u.rem(25);
+        }
 
         .content-text {
           h1 {
@@ -122,17 +131,13 @@ main {
           }
         }
       }
-      max-width: unset;
-      min-height: calc(100vh - u.rem(90));
-      @include u.breakpoint-max(medium) {
-        min-height: calc(100vh - u.rem(60));
-      }
     }
     &.partners {
       min-height: unset;
       .partners__wrapper {
         display: flex;
         flex-wrap: wrap;
+
         @include u.breakpoint-max(medium) {
           justify-content: center;
           background-color: white;
@@ -173,10 +178,13 @@ main {
     &.services {
       padding: u.rem(25);
       padding-top: u.rem(100);
-      background-color: u.$background-color;
+      //background-color: u.$background-color;
+      background-image: linear-gradient(180deg, rgba(255, 0, 0, 0), #fff);
       text-align: center;
+      max-width: unset;
 
       @include u.breakpoint-max(medium) {
+        background-color: u.$background-color;
         padding-top: u.rem(87);
       }
 
@@ -188,7 +196,6 @@ main {
       }
 
       .services-wrapper {
-        margin-top: u.rem(55);
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: 1fr;
@@ -199,8 +206,12 @@ main {
         // height: u.rem(585);
         padding-bottom: u.rem(50);
         transition: height 0.5s;
+        max-width: u.rem(1140);
+        width: 100%;
+        margin: 0 auto;
+        margin-top: u.rem(55);
 
-        @include u.breakpoint-max(large) {
+        @media (max-width: u.rem(1140)) {
           grid-template-columns: repeat(3, 1fr);
         }
         @include u.breakpoint-max(medium) {
@@ -291,6 +302,12 @@ main {
       }
     }
     &.offer {
+      text-align: center;
+      padding: u.rem(100) 0;
+
+      @media (max-width: u.rem(1140)) {
+        padding: u.rem(100) u.rem(25);
+      }
       p.title-desc {
         margin-top: u.rem(15);
       }
@@ -303,7 +320,12 @@ main {
         grid-column-gap: u.rem(23);
         grid-row-gap: u.rem(23);
 
-        @include u.breakpoint-max(large) {
+        position: relative;
+        overflow: hidden;
+        padding: 1px;
+        transition: height 0.5s;
+
+        @media (max-width: u.rem(1140)) {
           grid-template-columns: repeat(3, 1fr);
         }
         @include u.breakpoint-max(medium) {
@@ -313,10 +335,42 @@ main {
           grid-template-columns: repeat(1, 1fr);
         }
 
+        &::before {
+          content: "";
+          position: absolute;
+          height: 15%;
+          width: 100%;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          background-image: linear-gradient(180deg, rgba(255, 0, 0, 0), #fff);
+        }
+
+        &.show {
+          padding-bottom: unset;
+          padding-bottom: 3px;
+          // max-height: 100%;
+          // height: 1000px;
+          &::before {
+            content: unset;
+          }
+        }
+
         .offer-cont {
           padding: u.rem(30) u.rem(25);
           background-color: u.$secondary-background-color;
           border-radius: u.rem(24);
+
+          picture {
+            display: block;
+            width: 100%;
+            margin-bottom: u.rem(20);
+            text-align: right;
+
+            @include u.breakpoint-max(medium) {
+              text-align: center;
+            }
+          }
 
           h3 {
             color: #000;
@@ -327,12 +381,12 @@ main {
             font-weight: 500;
             margin-bottom: u.rem(5);
             text-align: left;
-            @include u.breakpoint-max(small) {
+            @include u.breakpoint-max(medium) {
               text-align: center;
             }
           }
           p {
-            @include u.breakpoint-max(small) {
+            @include u.breakpoint-max(medium) {
               text-align: center;
             }
           }
@@ -347,6 +401,23 @@ main {
             }
           }
         }
+      }
+      .show-more {
+        margin-top: u.rem(50);
+        text-align: center;
+        max-width: u.rem(204);
+        width: 100%;
+        padding: u.rem(14);
+        background: u.$background-color;
+        border: 1px solid u.$primary-color;
+        color: u.$primary-color;
+        border-radius: u.rem(24);
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-size: u.rem(14);
+        letter-spacing: u.rem(0.28);
+        line-height: u.rem(17);
+        font-weight: 500;
       }
     }
   }
