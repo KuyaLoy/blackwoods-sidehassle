@@ -506,35 +506,50 @@ main {
       }
 
       .test {
-        .tabs {
-          display: flex;
-          justify-content: center;
-          @media (max-width: 768px) {
-            display: none;
+        .swiper-container {
+          margin: 0 auto;
+          max-width: 800px; // Adjust the maximum width as needed
+          overflow: hidden; // Prevent slider from
+
+          .swiper-button-next,
+          .swiper-button-prev {
+            @media (min-width: 769px) {
+              display: none;
+            }
           }
         }
 
-        .tab {
-          padding: 10px 20px;
-          background-color: lightgray;
-          border: none;
-          cursor: pointer;
-          outline: none;
-        }
+        // Your existing SCSS styles
+        .tabs {
+          display: flex;
+          justify-content: center;
 
-        .tab.active {
-          background-color: #ccc;
+          @media (max-width: 768px) {
+            display: none;
+          }
+
+          .tab {
+            padding: 10px 20px;
+            background-color: lightgray;
+            border: none;
+            cursor: pointer;
+            outline: none;
+
+            &.active {
+              background-color: #ccc;
+            }
+          }
         }
 
         .slider {
           overflow: hidden;
           white-space: nowrap;
-        }
 
-        .slide-item {
-          display: inline-block;
-          width: 100%;
-          white-space: normal;
+          .slide-item {
+            display: inline-block;
+            width: 100%;
+            white-space: normal;
+          }
         }
       }
     }

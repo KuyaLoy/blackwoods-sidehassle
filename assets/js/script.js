@@ -72,7 +72,7 @@ $("#showMoreBtn2").click(function () {
 const mySwiper = new Swiper(".swiper-container", {
   slidesPerView: 1,
   spaceBetween: 0,
-  loop: false,
+  loop: true, // Add loop option for infinite scrolling
   initialSlide: 0,
   navigation: {
     nextEl: ".swiper-button-next", // Use Swiper.js navigation arrows
@@ -80,7 +80,7 @@ const mySwiper = new Swiper(".swiper-container", {
   },
   on: {
     slideChange: function () {
-      activeTabIndex = this.activeIndex;
+      activeTabIndex = this.realIndex; // Use realIndex for proper tab index
       setActiveTab();
     },
   },
