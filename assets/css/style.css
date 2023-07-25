@@ -90,7 +90,12 @@ table {
 }
 
 .section-padding {
-  padding: 6.25rem 1.5625rem;
+  padding: 6.25rem 0;
+}
+@media (max-width: 71.25rem) {
+  .section-padding {
+    padding: 6.25rem 1.5625rem;
+  }
 }
 
 html {
@@ -613,12 +618,6 @@ main section.services .show-more {
 }
 main section.offer {
   text-align: center;
-  padding: 6.25rem 0;
-}
-@media (max-width: 71.25rem) {
-  main section.offer {
-    padding: 6.25rem 1.5625rem;
-  }
 }
 main section.offer p.title-desc {
   margin-top: 0.9375rem;
@@ -714,7 +713,7 @@ main section.offer .offer-wrapper .offer-cont:hover h3 {
   color: var(--primary-color);
 }
 main section.offer .show-more {
-  margin-top: 3.125rem;
+  margin-top: 0.625rem;
   text-align: center;
   max-width: 12.75rem;
   width: 100%;
@@ -729,4 +728,137 @@ main section.offer .show-more {
   letter-spacing: 0.0175rem;
   line-height: 1.0625rem;
   font-weight: 500;
+}
+main section.strategy {
+  min-height: 200vh;
+  max-width: unset;
+  background-image: url("../images/strategy/background-bg.png");
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media (max-width: 56.24875em) {
+  main section.strategy {
+    padding-top: 0rem;
+  }
+}
+main section.strategy .strat-main-wrapper {
+  max-width: 71.25rem;
+  margin: 0 auto;
+}
+main section.strategy .strat-main-wrapper .strategy__title__wrapper .inner_cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+main section.strategy .strat-main-wrapper .strategy__title__wrapper .inner_cont > div {
+  width: 50%;
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .strat-main-wrapper .strategy__title__wrapper .inner_cont > div:nth-child(1) {
+    width: 100%;
+  }
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .strat-main-wrapper .strategy__title__wrapper .inner_cont > div:nth-child(2) {
+    display: none;
+  }
+}
+main section.strategy .strat-main-wrapper .strategy__title__wrapper .inner_cont > div h2 {
+  text-align: left;
+  max-width: 29.625rem;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .strat-main-wrapper .strategy__title__wrapper .inner_cont > div h2 {
+    max-width: unset;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+main section.strategy .strat-main-wrapper .strategy__title__wrapper .inner_cont > div hr {
+  margin-top: 2.5rem;
+  height: 0.125rem;
+  background-color: var(--primary-color);
+  border: none;
+}
+main section.strategy .strat-main-wrapper .strategy__title__cont {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  margin-top: -4.6875rem;
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .strat-main-wrapper .strategy__title__cont {
+    margin-top: -2.1875rem;
+  }
+}
+@media (max-width: 43.74875em) {
+  main section.strategy .strat-main-wrapper .strategy__title__cont {
+    margin-top: -3.4375rem;
+  }
+}
+main section.strategy .strat-main-wrapper .strategy__title__cont .common-description {
+  max-width: 53.625rem;
+  width: 100%;
+  text-align: left;
+  background-color: var(--secondary-background-color);
+  padding: 6.5625rem 4.375rem 3.125rem 4.375rem;
+  border-radius: 1.5rem;
+  color: #000;
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .strat-main-wrapper .strategy__title__cont .common-description {
+    padding: 4.6875rem 3.125rem 1.375rem 3.125rem;
+    text-align: center;
+  }
+}
+@media (max-width: 43.74875em) {
+  main section.strategy .strat-main-wrapper .strategy__title__cont .common-description {
+    padding-left: 1.5625rem;
+    padding-right: 1.5625rem;
+  }
+}
+main section.strategy .test .tabs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 768px) {
+  main section.strategy .test .tabs {
+    display: none;
+  }
+}
+main section.strategy .test .tab {
+  padding: 10px 20px;
+  background-color: lightgray;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+main section.strategy .test .tab.active {
+  background-color: #ccc;
+}
+main section.strategy .test .slider {
+  overflow: hidden;
+  white-space: nowrap;
+}
+main section.strategy .test .slide-item {
+  display: inline-block;
+  width: 100%;
+  white-space: normal;
 }

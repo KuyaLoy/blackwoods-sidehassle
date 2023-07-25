@@ -31,5 +31,9 @@
 }
 
 .section-padding {
-  padding: u.rem(100) u.rem(25);
+  padding: u.rem(100) 0;
+
+  @media (max-width: u.rem(1140)) {
+    padding: u.rem(100) u.rem(25);
+  }
 }

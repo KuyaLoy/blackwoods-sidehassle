@@ -68,3 +68,37 @@ $("#showMoreBtn2").click(function () {
   $(".offer-wrapper").addClass("show");
   $(".offer-wrapper").height(oldHeight2);
 });
+
+const mySwiper = new Swiper(".swiper-container", {
+  slidesPerView: 1,
+  spaceBetween: 0,
+  loop: false,
+  initialSlide: 0,
+  navigation: {
+    nextEl: ".swiper-button-next", // Use Swiper.js navigation arrows
+    prevEl: ".swiper-button-prev", // Use Swiper.js navigation arrows
+  },
+  on: {
+    slideChange: function () {
+      activeTabIndex = this.activeIndex;
+      setActiveTab();
+    },
+  },
+});
+
+let activeTabIndex = 0;
+
+function setActiveTab() {
+  $(".tab").removeClass("active");
+  $(".tab").eq(activeTabIndex).addClass("active");
+}
+
+$(".tab").on("click", function () {
+  const index = $(this).index();
+  activeTabIndex = index;
+  setActiveTab();
+  mySwiper.slideTo(index); // Slide to the corresponding tab
+});
+
+// Set initial state
+setActiveTab();
