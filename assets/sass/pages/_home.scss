@@ -174,6 +174,7 @@ main {
       padding: u.rem(25);
       padding-top: u.rem(100);
       background-color: u.$background-color;
+      text-align: center;
 
       @include u.breakpoint-max(medium) {
         padding-top: u.rem(87);
@@ -195,9 +196,19 @@ main {
         grid-row-gap: 0px;
         position: relative;
         overflow: hidden;
-        height: u.rem(585);
+        // height: u.rem(585);
         padding-bottom: u.rem(50);
         transition: height 0.5s;
+
+        @include u.breakpoint-max(large) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @include u.breakpoint-max(medium) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @include u.breakpoint-max(small) {
+          grid-template-columns: repeat(1, 1fr);
+        }
 
         &::before {
           content: "";
@@ -212,8 +223,8 @@ main {
 
         &.show {
           padding-bottom: unset;
-          max-height: 100%;
-          height: 1000px;
+          // max-height: 100%;
+          // height: 1000px;
           &::before {
             content: unset;
           }
@@ -236,6 +247,15 @@ main {
               line-height: u.rem(25);
               font-weight: 500;
               margin-bottom: u.rem(5);
+              text-align: left;
+              @include u.breakpoint-max(small) {
+                text-align: center;
+              }
+            }
+            p {
+              @include u.breakpoint-max(small) {
+                text-align: center;
+              }
             }
           }
 
@@ -251,9 +271,83 @@ main {
           }
         }
       }
+
+      .show-more {
+        margin-top: u.rem(50);
+        text-align: center;
+        max-width: u.rem(204);
+        width: 100%;
+        padding: u.rem(14);
+        background: u.$background-color;
+        border: 1px solid u.$primary-color;
+        color: u.$primary-color;
+        border-radius: u.rem(24);
+        cursor: pointer;
+        font-family: "Poppins", sans-serif;
+        font-size: u.rem(14);
+        letter-spacing: u.rem(0.28);
+        line-height: u.rem(17);
+        font-weight: 500;
+      }
     }
-    &.section-3 {
-      height: 100vh;
+    &.offer {
+      p.title-desc {
+        margin-top: u.rem(15);
+      }
+
+      .offer-wrapper {
+        margin-top: u.rem(70);
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: u.rem(23);
+        grid-row-gap: u.rem(23);
+
+        @include u.breakpoint-max(large) {
+          grid-template-columns: repeat(3, 1fr);
+        }
+        @include u.breakpoint-max(medium) {
+          grid-template-columns: repeat(2, 1fr);
+        }
+        @include u.breakpoint-max(small) {
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .offer-cont {
+          padding: u.rem(30) u.rem(25);
+          background-color: u.$secondary-background-color;
+          border-radius: u.rem(24);
+
+          h3 {
+            color: #000;
+            font-family: "Poppins", sans-serif;
+            font-size: u.rem(16);
+            letter-spacing: u.rem(0.8);
+            line-height: u.rem(25);
+            font-weight: 500;
+            margin-bottom: u.rem(5);
+            text-align: left;
+            @include u.breakpoint-max(small) {
+              text-align: center;
+            }
+          }
+          p {
+            @include u.breakpoint-max(small) {
+              text-align: center;
+            }
+          }
+
+          &:hover {
+            background-color: u.$background-color;
+            cursor: pointer;
+            outline: 1px solid u.$primary-color;
+
+            h3 {
+              color: u.$primary-color;
+            }
+          }
+        }
+      }
     }
   }
 }
