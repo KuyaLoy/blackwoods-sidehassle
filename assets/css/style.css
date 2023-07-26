@@ -942,9 +942,7 @@ main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-wrapper .
   opacity: 0 !important;
 }
 main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-wrapper .swiper-slide .strat-inner-cont {
-  -webkit-backdrop-filter: blur(0.9375rem) !important;
-          backdrop-filter: blur(0.9375rem) !important;
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   padding: 3.75rem 4.375rem;
   border-radius: 1.5rem;
   display: -webkit-box;
