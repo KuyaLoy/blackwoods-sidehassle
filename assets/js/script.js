@@ -121,7 +121,7 @@ $(document).ready(function () {
       var li = $("<li></li>");
       var img = $("<img>").attr(
         "src",
-        "/assets/images/agency/logo/" + shuffledArray[j] + ".svg"
+        "./assets/images/agency/logo/" + shuffledArray[j] + ".svg"
       );
       li.append(img);
       ul.append(li);
