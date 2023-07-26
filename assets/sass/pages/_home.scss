@@ -588,7 +588,7 @@ main {
                 align-items: center;
                 justify-content: center;
 
-                min-height: u.rem(380);
+                min-height: u.rem(400);
                 @include u.breakpoint-max(medium) {
                   flex-direction: column;
                   padding: u.rem(30) u.rem(20);

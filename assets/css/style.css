@@ -960,7 +960,7 @@ main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-wrapper .
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  min-height: 23.75rem;
+  min-height: 25rem;
 }
 @media (max-width: 56.24875em) {
   main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-wrapper .swiper-slide .strat-inner-cont {
