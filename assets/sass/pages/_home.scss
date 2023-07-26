@@ -563,7 +563,7 @@ main {
           .swiper-wrapper {
             .swiper-slide {
               opacity: 0; // Initial opacity set to 0 for fade effect
-              transition: opacity 0.5s; // Set the desired transition duration
+              transition: opacity 0.1s; // Set the desired transition duration
               &.swiper-slide-active {
                 opacity: 1 !important; // Active slide opacity set to 1 for fade-in
               }
@@ -585,7 +585,7 @@ main {
 
                 display: flex;
                 flex-direction: row;
-                align-items: center;
+                //align-items: center;
                 justify-content: center;
 
                 min-height: u.rem(400);

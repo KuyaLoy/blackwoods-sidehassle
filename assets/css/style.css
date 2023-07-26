@@ -929,8 +929,8 @@ main section.strategy .strat-slider-wrapper .strat-swiper-cont {
 }
 main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-wrapper .swiper-slide {
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+  -webkit-transition: opacity 0.1s;
+  transition: opacity 0.1s;
 }
 main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-wrapper .swiper-slide.swiper-slide-active {
   opacity: 1 !important;
@@ -952,9 +952,6 @@ main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-wrapper .
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
