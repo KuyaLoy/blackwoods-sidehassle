@@ -24,7 +24,7 @@ main {
       min-height: calc(100vh - u.rem(90));
 
       @include u.breakpoint-max(medium) {
-        min-height: calc(100vh - u.rem(60));
+        min-height: calc(100vh - u.rem(65));
       }
 
       &::before {
@@ -504,25 +504,29 @@ main {
           }
         }
       }
+      .strat-title {
+        max-width: u.rem(900);
+        width: 100%;
+        margin: 0 auto;
+        margin-top: u.rem(150);
+        margin-bottom: u.rem(40);
+      }
 
-      .test {
-        .swiper-container {
-          margin: 0 auto;
-          max-width: 800px; // Adjust the maximum width as needed
-          overflow: hidden; // Prevent slider from
-
-          .swiper-button-next,
-          .swiper-button-prev {
-            @media (min-width: 769px) {
-              display: none;
-            }
-          }
-        }
+      .strat-slider-wrapper {
+        max-width: u.rem(1140);
+        margin: 0 auto;
 
         // Your existing SCSS styles
         .tabs {
           display: flex;
           justify-content: center;
+          padding: u.rem(5);
+          background-color: hsla(0, 0%, 100%, 0.4);
+          max-width: fit-content;
+          overflow: hidden;
+          border-radius: u.rem(42);
+          margin: 0 auto;
+          margin-bottom: u.rem(80);
 
           @media (max-width: 768px) {
             display: none;
@@ -530,14 +534,203 @@ main {
 
           .tab {
             padding: 10px 20px;
-            background-color: lightgray;
+            background-color: transparent;
             border: none;
             cursor: pointer;
             outline: none;
+            color: u.$text-color;
+
+            font-family: "Poppins", sans-serif;
+            font-size: u.rem(14);
+            font-weight: 500;
+            letter-spacing: u.rem(0.7);
+            line-height: u.rem(22);
+
+            padding: u.rem(13) u.rem(40);
 
             &.active {
-              background-color: #ccc;
+              background-color: u.$primary-color;
+              border-radius: u.rem(42);
+              color: u.$background-color;
             }
+          }
+        }
+        .strat-swiper-cont {
+          margin: 0 auto;
+          max-width: 100%; // Adjust the maximum width as needed
+          //overflow: hidden; // Prevent slider from
+
+          .swiper-wrapper {
+            .swiper-slide {
+              opacity: 0; // Initial opacity set to 0 for fade effect
+              transition: opacity 0.5s; // Set the desired transition duration
+              &.swiper-slide-active {
+                opacity: 1 !important; // Active slide opacity set to 1 for fade-in
+              }
+
+              &.swiper-slide-next,
+              &.swiper-slide-prev {
+                opacity: 0 !important; // Inactive slide opacity set to 0 for fade-out
+              }
+
+              &.swiper-slide-duplicate-next,
+              &.swiper-slide-duplicate-prev {
+                opacity: 0 !important; // Additional slides in loop should also be faded out
+              }
+              .strat-inner-cont {
+                backdrop-filter: blur(u.rem(15)) !important;
+                background-color: rgba(255, 255, 255, 0.4);
+                padding: u.rem(60) u.rem(70);
+                border-radius: u.rem(24);
+
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+
+                min-height: u.rem(380);
+                @include u.breakpoint-max(medium) {
+                  flex-direction: column;
+                  padding: u.rem(30) u.rem(20);
+                  text-align: center;
+                }
+
+                .text-cont {
+                  width: 45%;
+                  @media (max-width: u.rem(1200)) {
+                    width: 60%;
+                  }
+                  @include u.breakpoint-max(medium) {
+                    width: 100%;
+                  }
+                  h3 {
+                    font-family: "Poppins", sans-serif;
+                    font-size: u.rem(32);
+                    font-weight: 500;
+                    letter-spacing: u.rem(0.64);
+                    line-height: u.rem(45);
+                    color: 000;
+                    margin-bottom: u.rem(20);
+                    @include u.breakpoint-max(medium) {
+                      font-size: u.rem(24);
+                      font-weight: 500;
+                      letter-spacing: u.rem(0.48);
+                      line-height: u.rem(35);
+                    }
+                  }
+                  p {
+                    font-family: "Poppins", sans-serif;
+                    font-size: u.rem(16);
+                    font-weight: 400;
+                    letter-spacing: u.rem(0.9);
+                    line-height: u.rem(24);
+                    color: #000;
+                    margin-bottom: u.rem(20);
+                  }
+                  ul {
+                    margin-bottom: u.rem(20);
+                    list-style: circle;
+                    margin-left: u.rem(20);
+
+                    font-family: "Poppins", sans-serif;
+                    font-size: u.rem(16);
+                    font-weight: 400;
+                    letter-spacing: u.rem(0.9);
+                    line-height: u.rem(24);
+                    color: #000;
+                    margin-bottom: u.rem(40);
+                    @include u.breakpoint-max(medium) {
+                      text-align: left;
+                    }
+                  }
+                  a {
+                    font-family: "Poppins", sans-serif;
+                    font-size: u.rem(14);
+                    font-weight: 500;
+                    letter-spacing: u.rem(0.7);
+                    line-height: u.rem(22);
+                    background-color: u.$primary-color;
+                    padding: u.rem(13) u.rem(40);
+                    text-decoration: none;
+                    color: u.$background-color;
+                    border-radius: u.rem(42);
+
+                    @include u.breakpoint-max(medium) {
+                      display: none;
+                    }
+                  }
+                }
+                .image-cont {
+                  //position: relative;
+                  width: 55%;
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  height: max-content;
+                  flex-direction: column;
+                  @media (max-width: u.rem(1200)) {
+                    width: 40%;
+                  }
+                  @include u.breakpoint-max(medium) {
+                    width: 100%;
+                  }
+                  a {
+                    display: none;
+                    @include u.breakpoint-max(medium) {
+                      display: block;
+                      margin-top: u.rem(40);
+                      font-family: "Poppins", sans-serif;
+                      font-size: u.rem(14);
+                      font-weight: 500;
+                      letter-spacing: u.rem(0.7);
+                      line-height: u.rem(22);
+                      background-color: u.$primary-color;
+                      padding: u.rem(13);
+                      width: 90%;
+                      text-decoration: none;
+                      color: u.$background-color;
+                      border-radius: u.rem(42);
+                    }
+                  }
+
+                  img {
+                    position: absolute;
+                    bottom: u.rem(-75);
+                    width: 45%;
+                    @media (max-width: u.rem(1200)) {
+                      position: relative;
+                      width: 100%;
+                      bottom: u.rem(0);
+                    }
+                    @include u.breakpoint-max(medium) {
+                      width: 80%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          .swiper-button-next,
+          .swiper-button-prev {
+            color: #c3c3c3;
+            top: var(--swiper-navigation-top-offset, 65%);
+            @media (min-width: 769px) {
+              display: none;
+            }
+          }
+          .swiper-button-next:after,
+          .swiper-button-prev:after {
+            font-size: u.rem(30);
+            font-weight: bold;
+          }
+          .swiper-button-prev,
+          .swiper-rtl .swiper-button-next {
+            left: var(--swiper-navigation-sides-offset, 30px);
+          }
+          .swiper-button-next,
+          .swiper-rtl .swiper-button-prev {
+            right: var(--swiper-navigation-sides-offset, 30px);
           }
         }
 

@@ -69,7 +69,8 @@ $("#showMoreBtn2").click(function () {
   $(".offer-wrapper").height(oldHeight2);
 });
 
-const mySwiper = new Swiper(".swiper-container", {
+const mySwiper = new Swiper(".strat-swiper-cont", {
+  effect: "fade", // Set the fade effect
   slidesPerView: 1,
   spaceBetween: 0,
   loop: true, // Add loop option for infinite scrolling
