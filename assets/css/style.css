@@ -98,6 +98,47 @@ table {
   }
 }
 
+@-webkit-keyframes scrollingRight {
+  0% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+
+@keyframes scrollingRight {
+  0% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+  100% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+}
+@-webkit-keyframes scrollingLeft {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
+@keyframes scrollingLeft {
+  0% {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+  }
+  100% {
+    -webkit-transform: translate(-100%);
+            transform: translate(-100%);
+  }
+}
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -1094,12 +1135,125 @@ main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-button-ne
 main section.strategy .strat-slider-wrapper .strat-swiper-cont .swiper-rtl .swiper-button-prev {
   right: var(--swiper-navigation-sides-offset, 30px);
 }
-main section.strategy .strat-slider-wrapper .slider {
+main section.strategy .strat-slider-wrapper .strat-swiper-cont .slider {
   overflow: hidden;
   white-space: nowrap;
 }
-main section.strategy .strat-slider-wrapper .slider .slide-item {
+main section.strategy .strat-slider-wrapper .strat-swiper-cont .slider .slide-item {
   display: inline-block;
   width: 100%;
   white-space: normal;
+}
+main section.strategy .helping-cont {
+  margin-top: 9.375rem;
+  text-align: center;
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .helping-cont {
+    margin-top: 4.375rem;
+  }
+}
+main section.strategy .helping-cont h2 {
+  font-family: "Poppins", sans-serif;
+  font-size: 3.4375rem;
+  font-weight: 500;
+  letter-spacing: 0.06875rem;
+  line-height: 4.6875rem;
+  color: var(--background-color);
+  margin-bottom: 0.625rem;
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .helping-cont h2 {
+    font-size: 1.5rem;
+    letter-spacing: 0.03rem;
+    line-height: 2.1875rem;
+  }
+}
+main section.strategy .helping-cont p {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  letter-spacing: 0.04375rem;
+  line-height: 1.375rem;
+  color: var(--background-color);
+  margin-bottom: 1.25rem;
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .helping-cont p {
+    margin-bottom: 1.875rem;
+  }
+}
+main section.strategy .helping-cont a {
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 500;
+  max-width: 12.8125rem;
+  width: 100%;
+  display: inline-block;
+  padding: 0.875rem;
+  text-decoration: none;
+  border-radius: 1.5rem;
+  text-align: center;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+@media (max-width: 56.24875em) {
+  main section.strategy .helping-cont a {
+    max-width: unset;
+  }
+}
+main section.strategy .agency {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 7.5rem;
+}
+main section.strategy .agency > div {
+  width: 50%;
+  overflow: hidden;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+main section.strategy .agency .agency-icons {
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(0.9375rem);
+          backdrop-filter: blur(0.9375rem);
+}
+main section.strategy .agency .agency-icons ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 1.5rem;
+     -moz-column-gap: 1.5rem;
+          column-gap: 1.5rem;
+  gap: 1.5rem;
+}
+main section.strategy .agency .agency-icons ul li {
+  width: 10;
+  padding: 0.9375rem;
+  background-color: rgba(255, 255, 255, 0.4);
+  -webkit-backdrop-filter: blur(0.3125rem);
+          backdrop-filter: blur(0.3125rem);
+  border-radius: 0.75rem;
+}
+main section.strategy .agency .agency-icons ul li img {
+  width: 2rem;
+  height: 2rem;
+}
+main section.strategy .agency .agency-icons ul:nth-child(odd) {
+  -webkit-animation: scrollingLeft 15s linear infinite;
+          animation: scrollingLeft 15s linear infinite;
+}
+main section.strategy .agency .agency-icons ul:nth-child(even) {
+  -webkit-animation: scrollingRight 15s linear infinite;
+          animation: scrollingRight 15s linear infinite;
+}
+main section.strategy .agency .agency-icons ul:not(:last-child) {
+  margin-bottom: 1.5rem;
 }

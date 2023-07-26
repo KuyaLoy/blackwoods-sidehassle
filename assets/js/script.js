@@ -103,3 +103,45 @@ $(".tab").on("click", function () {
 
 // Set initial state
 setActiveTab();
+
+$(document).ready(function () {
+  var ulCount = 3;
+  var imageCount = 21;
+  var ulContainer = $(".agency-icons");
+
+  for (var i = 0; i < ulCount; i++) {
+    var ul = $("<ul></ul>");
+    var imageArray = Array.from(
+      { length: imageCount },
+      (_, index) => index + 1
+    );
+    var shuffledArray = shuffleArray(imageArray);
+
+    for (var j = 0; j < imageCount; j++) {
+      var li = $("<li></li>");
+      var img = $("<img>").attr(
+        "src",
+        "/assets/images/agency/logo/" + shuffledArray[j] + ".svg"
+      );
+      li.append(img);
+      ul.append(li);
+    }
+
+    ulContainer.append(ul);
+  }
+});
+
+// Function to shuffle an array using Fisher-Yates algorithm
+function shuffleArray(array) {
+  var currentIndex = array.length,
+    randomIndex;
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ];
+  }
+  return array;
+}

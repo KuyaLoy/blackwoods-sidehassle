@@ -1,0 +1,10 @@
+<svg id="the-sandbox-sand-logo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" height="40" viewBox="0 0 40 40">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.504" y1="20.496" x2="0.517" y2="20.482" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#00adef"/>
+      <stop offset="1" stop-color="#0084ff"/>
+    </linearGradient>
+  </defs>
+  <circle id="Ellipse_27" data-name="Ellipse 27" cx="20" cy="20" r="20" fill="url(#linear-gradient)"/>
+  <path id="Path_1337" data-name="Path 1337" d="M16.061,11.78,13.9,13.941V22.5l2.161,2.161h8.563v4.321H20.382V26.825H13.9v4.321l2.161,2.161H28.944l2.161-2.161V22.5l-2.161-2.161H20.382V16.021H24.7v2.161h6.482V13.861L29.025,11.7H16.061Z" transform="translate(-2.777 -2.337)" fill="#fff"/>
+</svg>

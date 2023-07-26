@@ -37,3 +37,22 @@
     padding: u.rem(100) u.rem(25);
   }
 }
+
+@keyframes scrollingRight {
+  0% {
+    transform: translate(-100%);
+  }
+
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes scrollingLeft {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}
