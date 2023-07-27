@@ -1,4 +1,4 @@
-//menu on click
+//######### menu on click #########
 $("#burgerMenu").click(function () {
   $(".menu").slideToggle();
 });
@@ -13,7 +13,7 @@ window.onscroll = () => {
   }
 };
 
-//services-wrapper
+//######### services-wrapper #########
 let oldHeight1;
 $(document).ready(function () {
   let servicesWrapper = $(".services-wrapper");
@@ -45,7 +45,7 @@ $("#showMoreBtn").click(function () {
   $(".services-wrapper").height(oldHeight1);
 });
 
-//services-wrapper
+//######### services #########
 let oldHeight2;
 $(document).ready(function () {
   let offerWrapper = $(".offer-wrapper");
@@ -69,6 +69,7 @@ $("#showMoreBtn2").click(function () {
   $(".offer-wrapper").height(oldHeight2);
 });
 
+//######### strategy #########
 const mySwiper = new Swiper(".strat-swiper-cont", {
   effect: "fade", // Set the fade effect
   slidesPerView: 1,
@@ -100,14 +101,13 @@ $(".tab").on("click", function () {
   setActiveTab();
   mySwiper.slideTo(index); // Slide to the corresponding tab
 });
-
-// Set initial state
 setActiveTab();
 
+//######### agency #########
 $(document).ready(function () {
   var ulCount = 3;
   var imageCount = 21;
-  var ulContainer = $(".agency-icons");
+  var ulContainer = $(".icons-cont");
 
   for (var i = 0; i < ulCount; i++) {
     var ul = $("<ul></ul>");
@@ -145,3 +145,49 @@ function shuffleArray(array) {
   }
   return array;
 }
+
+// $(document).ready(function () {
+//   const agencyContHeight = $(".agency-cont").height();
+//   $(".agency-icons").height(agencyContHeight);
+// });
+$(document).ready(function () {
+  const $accordionItems = $(".accordion-item");
+
+  $accordionItems.each(function (index) {
+    const $title = $(this).find(".accordion-title");
+    const $content = $(this).find(".accordion-content");
+    const $iconWeb = $title.find(".icon-web");
+
+    // Set the first accordion to be open by default
+    if (index === 0) {
+      $iconWeb
+        .attr("src", "./assets/images/faq/arrow-up-web.svg")
+        .attr("alt", "Open");
+      $content.slideDown();
+    } else {
+      $iconWeb
+        .attr("src", "./assets/images/faq/arrow-down-web.svg")
+        .attr("alt", "Closed");
+      $content.hide();
+    }
+
+    $title.on("click", function () {
+      const $currentItem = $(this).parent(".accordion-item");
+
+      if (!$currentItem.hasClass("open")) {
+        $accordionItems
+          .removeClass("open")
+          .find(".icon-web")
+          .attr("src", "./assets/images/faq/arrow-down-web.svg")
+          .attr("alt", "Closed");
+        $(".accordion-content").slideUp();
+
+        $currentItem.addClass("open");
+        $iconWeb
+          .attr("src", "./assets/images/faq/arrow-up-web.svg")
+          .attr("alt", "Open");
+        $content.slideDown();
+      }
+    });
+  });
+});
