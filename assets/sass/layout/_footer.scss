@@ -1,1 +1,186 @@
 @use "../utils" as u;
+
+footer {
+  background-color: u.$primary-color;
+  color: #fff;
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: 30% 55% 15%;
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+
+    font-size: u.rem(14);
+    line-height: u.rem(22);
+    letter-spacing: u.rem(0.7);
+
+    padding: u.rem(60) u.rem(25);
+
+    @include u.breakpoint-max(medium) {
+      grid-template-columns: 100%;
+    }
+
+    * {
+      text-decoration: none;
+    }
+
+    .col-1 {
+      display: flex;
+      flex-direction: column;
+      height: inherit;
+      justify-content: space-between;
+
+      @include u.breakpoint-max(medium) {
+        margin-bottom: u.rem(30);
+      }
+      .iden {
+        .logo {
+          max-width: u.rem(204);
+          width: 100%;
+          margin-bottom: u.rem(20);
+        }
+        .description {
+          font-weight: 300;
+          color: #ffffff;
+          width: 80%;
+          @include u.breakpoint-max(medium) {
+            width: 100%;
+          }
+        }
+      }
+      .footer-contact {
+        @include u.breakpoint-max(medium) {
+          display: none;
+        }
+        p {
+          font-weight: 500;
+          color: #ffffff;
+          margin-bottom: u.rem(17);
+        }
+        ul {
+          li {
+            padding: u.rem(5) 0;
+            a {
+              color: white;
+              img {
+                width: u.rem(20);
+                height: u.rem(20);
+                margin-right: u.rem(10);
+              }
+            }
+          }
+        }
+      }
+    }
+    .col-2,
+    .col-3 {
+      p {
+        line-height: u.rem(25);
+        color: #fff;
+        font-weight: 500;
+        padding: u.rem(2.5) u.rem(10);
+        border-left: 1px solid #fff;
+        margin-bottom: u.rem(20);
+        margin-left: u.rem(-10);
+
+        @include u.breakpoint-max(medium) {
+          margin-bottom: u.rem(20);
+          border: none;
+          border-top: 1px solid #fff;
+          width: fit-content;
+          margin-left: u.rem(0);
+          padding: u.rem(30) u.rem(0);
+          margin-bottom: 0;
+        }
+      }
+      ul {
+        li {
+          a {
+            color: #a1e4c2;
+            line-height: u.rem(22);
+            font-weight: 300;
+            padding: u.rem(5) 0;
+            display: block;
+            &:hover {
+              color: white;
+            }
+          }
+        }
+      }
+    }
+    .col-2 {
+      margin-bottom: u.rem(30);
+      .services-list {
+        display: flex;
+        @include u.breakpoint-max(medium) {
+          margin-top: u.rem(-10);
+        }
+        ul {
+          width: 50%;
+          li {
+            a {
+              color: #a1e4c2;
+              line-height: u.rem(22);
+              font-weight: 300;
+              padding: u.rem(5) 0;
+              display: block;
+              &:hover {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+    }
+    .col-3 {
+      .footer-contact {
+        display: none;
+      }
+      @include u.breakpoint-max(medium) {
+        ul {
+          margin-top: u.rem(-10);
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(3, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          li {
+            &:nth-child(1) {
+              grid-area: 1 / 1 / 2 / 2;
+            }
+            &:nth-child(2) {
+              grid-area: 2 / 1 / 3 / 2;
+            }
+            &:nth-child(3) {
+              grid-area: 3 / 1 / 4 / 2;
+            }
+            &:nth-child(4) {
+              grid-area: 1 / 2 / 2 / 3;
+            }
+            &:nth-child(5) {
+              grid-area: 2 / 2 / 3 / 3;
+            }
+          }
+        }
+        .footer-contact {
+          display: block;
+          margin-top: u.rem(30);
+          ul {
+            li {
+              a {
+                color: white;
+                display: flex;
+                img {
+                  width: u.rem(20);
+                  height: u.rem(20);
+                  margin-right: u.rem(10);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

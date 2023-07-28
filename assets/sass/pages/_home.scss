@@ -1200,6 +1200,20 @@ main {
               padding: 20px;
               backdrop-filter: blur(6px);
             }
+
+            .disclaimer {
+              display: block;
+              margin-top: u.rem(20);
+              font-size: u.rem(12);
+              line-height: u.rem(16);
+              letter-spacing: u.rem(0.6);
+              font-weight: 300;
+              color: #b2b2b2;
+
+              @include u.breakpoint-max(medium) {
+                line-height: u.rem(18);
+              }
+            }
           }
         }
       }
