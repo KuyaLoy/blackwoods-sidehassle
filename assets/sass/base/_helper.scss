@@ -56,3 +56,9 @@
     transform: translate(-90%);
   }
 }
+
+.container {
+  max-width: u.rem(1140);
+  width: 100%;
+  margin: 0 auto;
+}

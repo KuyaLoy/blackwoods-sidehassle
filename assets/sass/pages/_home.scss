@@ -12,9 +12,6 @@ main {
     background-position: 62.5% top;
   }
   section {
-    max-width: u.rem(1140);
-    width: 100%;
-    margin: 0 auto;
     position: relative;
 
     &.hero {
@@ -41,9 +38,6 @@ main {
         }
       }
       .content {
-        max-width: u.rem(1140);
-        width: 100%;
-        margin: 0 auto;
         position: relative;
 
         @include u.breakpoint-max(large) {
@@ -54,7 +48,7 @@ main {
           h1 {
             max-width: u.rem(585);
             width: 100%;
-            font-family: "Poppins", sans-serif;
+
             font-size: u.rem(55);
             font-weight: 500;
             letter-spacing: u.rem(1.1);
@@ -72,7 +66,7 @@ main {
           .description {
             max-width: u.rem(585);
             width: 100%;
-            font-family: "Poppins", sans-serif;
+
             font-size: u.rem(16);
             font-weight: 300;
             letter-spacing: u.rem(0.8);
@@ -93,7 +87,6 @@ main {
               margin-top: u.rem(128);
             }
             a {
-              font-family: "Poppins", sans-serif;
               font-size: u.rem(16);
               font-weight: 500;
               margin-right: u.rem(20);
@@ -182,7 +175,6 @@ main {
       //background-color: u.$background-color;
       background-image: linear-gradient(180deg, rgba(255, 0, 0, 0), #fff);
       text-align: center;
-      max-width: unset;
 
       @include u.breakpoint-max(medium) {
         background-color: u.$background-color;
@@ -207,9 +199,6 @@ main {
         // height: u.rem(585);
         padding-bottom: u.rem(50);
         transition: height 0.5s;
-        max-width: u.rem(1140);
-        width: 100%;
-        margin: 0 auto;
         margin-top: u.rem(55);
 
         @media (max-width: u.rem(1140)) {
@@ -253,7 +242,7 @@ main {
             padding: u.rem(40) u.rem(20);
             h3 {
               color: #000;
-              font-family: "Poppins", sans-serif;
+
               font-size: u.rem(16);
               letter-spacing: u.rem(0.8);
               line-height: u.rem(25);
@@ -295,7 +284,7 @@ main {
         color: u.$primary-color;
         border-radius: u.rem(24);
         cursor: pointer;
-        font-family: "Poppins", sans-serif;
+
         font-size: u.rem(14);
         letter-spacing: u.rem(0.28);
         line-height: u.rem(17);
@@ -371,7 +360,7 @@ main {
 
           h3 {
             color: #000;
-            font-family: "Poppins", sans-serif;
+
             font-size: u.rem(16);
             letter-spacing: u.rem(0.8);
             line-height: u.rem(25);
@@ -410,7 +399,7 @@ main {
         color: u.$primary-color;
         border-radius: u.rem(24);
         cursor: pointer;
-        font-family: "Poppins", sans-serif;
+
         font-size: u.rem(14);
         letter-spacing: u.rem(0.28);
         line-height: u.rem(17);
@@ -432,8 +421,6 @@ main {
         padding-top: u.rem(0);
       }
       .strat-main-wrapper {
-        max-width: u.rem(1140);
-        margin: 0 auto;
         .strategy__title__wrapper {
           .inner_cont {
             display: flex;
@@ -524,8 +511,6 @@ main {
       }
 
       .strat-slider-wrapper {
-        max-width: u.rem(1140);
-        margin: 0 auto;
         @media (max-width: u.rem(1140)) {
           padding-left: u.rem(25);
           padding-right: u.rem(25);
@@ -555,7 +540,6 @@ main {
             outline: none;
             color: u.$text-color;
 
-            font-family: "Poppins", sans-serif;
             font-size: u.rem(14);
             font-weight: 500;
             letter-spacing: u.rem(0.7);
@@ -619,7 +603,6 @@ main {
                     width: 100%;
                   }
                   h3 {
-                    font-family: "Poppins", sans-serif;
                     font-size: u.rem(32);
                     font-weight: 500;
                     letter-spacing: u.rem(0.64);
@@ -634,7 +617,6 @@ main {
                     }
                   }
                   p {
-                    font-family: "Poppins", sans-serif;
                     font-size: u.rem(16);
                     font-weight: 400;
                     letter-spacing: u.rem(0.9);
@@ -647,7 +629,6 @@ main {
                     list-style: circle;
                     margin-left: u.rem(20);
 
-                    font-family: "Poppins", sans-serif;
                     font-size: u.rem(16);
                     font-weight: 400;
                     letter-spacing: u.rem(0.9);
@@ -659,7 +640,6 @@ main {
                     }
                   }
                   a {
-                    font-family: "Poppins", sans-serif;
                     font-size: u.rem(14);
                     font-weight: 500;
                     letter-spacing: u.rem(0.7);
@@ -694,7 +674,7 @@ main {
                     @include u.breakpoint-max(medium) {
                       display: block;
                       margin-top: u.rem(40);
-                      font-family: "Poppins", sans-serif;
+
                       font-size: u.rem(14);
                       font-weight: 500;
                       letter-spacing: u.rem(0.7);
@@ -774,7 +754,6 @@ main {
         }
 
         h2 {
-          font-family: "Poppins", sans-serif;
           font-size: u.rem(55);
           font-weight: 500;
           letter-spacing: u.rem(1.1);
@@ -789,7 +768,6 @@ main {
           }
         }
         p {
-          font-family: "Poppins", sans-serif;
           font-size: u.rem(14);
           font-weight: 300;
           letter-spacing: u.rem(0.7);
@@ -801,7 +779,6 @@ main {
           }
         }
         a {
-          font-family: "Poppins", sans-serif;
           font-size: u.rem(14);
           font-weight: 500;
 
@@ -901,12 +878,14 @@ main {
             padding-left: u.rem(25);
           }
           @include u.breakpoint-max(medium) {
-            box-shadow: 0px 0px 30px #66dba3;
+            box-shadow: 0px 35px 110px #66dba3;
           }
           .text-cont {
             max-width: u.rem(474);
+            @include u.breakpoint-max(medium) {
+              max-width: unset;
+            }
             h3 {
-              font-family: "Poppins", sans-serif;
               font-size: u.rem(32);
               font-weight: 500;
               letter-spacing: u.rem(0.64);
@@ -923,8 +902,10 @@ main {
             }
             p {
               color: #000;
-              @include u.breakpoint-min(medium) {
-                text-align: left;
+              text-align: left;
+
+              @include u.breakpoint-max(medium) {
+                text-align: center;
               }
             }
           }
@@ -932,55 +913,292 @@ main {
       }
     }
     &.faq {
-      & > div {
+      .faq-main-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        & > div {
+          width: 50%;
+          @include u.breakpoint-max(medium) {
+            width: 100%;
+          }
+        }
+        .faq-title-cont {
+          h2 {
+            text-align: left;
+          }
+        }
         .faq-accor-wrapper {
           .accordion {
-            max-width: 400px;
+            width: 100%;
             margin: 20px auto;
 
             &-item {
-              border: 1px solid #ccc;
-              border-radius: 4px;
-              margin-bottom: 10px;
+              border-bottom: 1px solid #000;
+              margin-bottom: u.rem(20);
 
               &.open {
+                border-bottom: 1px solid u.$primary-color;
+                .accordion-title {
+                  color: u.$primary-color;
+
+                  .indicator {
+                    width: u.rem(24);
+                    height: u.rem(24);
+                    display: block;
+                    background-image: url(../images/faq/arrow-up-web.svg);
+                    @include u.breakpoint-max(medium) {
+                      background-image: url(../images/faq/arrow-up.svg);
+                      width: u.rem(12);
+                      height: u.rem(12);
+                    }
+                  }
+                }
                 .accordion-content {
                   display: block;
+                  font-size: u.rem(14);
+                  line-height: u.rem(22);
+                  letter-spacing: u.rem(0.7);
+                  font-weight: 300;
+
+                  color: #000;
                 }
               }
 
               .accordion-title {
-                padding: 10px;
-                background-color: #f0f0f0;
+                padding: 20px 40px 20px 10px;
+                //background-color: #f0f0f0;
                 cursor: pointer;
                 display: flex;
-                justify-content: space-between;
+                // justify-content: space-between;
                 align-items: center;
+                position: relative;
+
+                font-size: u.rem(18);
+                line-height: u.rem(25);
+                letter-spacing: u.rem(0.9);
+                font-weight: 500;
+
+                @include u.breakpoint-max(medium) {
+                  font-size: u.rem(16);
+                  letter-spacing: u.rem(0.8);
+                  padding: 20px 40px 20px 0px;
+                }
+
+                .indicator {
+                  display: none;
+                  height: u.rem(12);
+                  width: u.rem(12);
+                  background-image: url(../images/faq/arrow-down.svg);
+                  background-position: center;
+                  background-repeat: no-repeat;
+                  background-size: contain;
+                  position: absolute;
+                  right: u.rem(10);
+                  @include u.breakpoint-max(medium) {
+                    display: block;
+                  }
+                }
 
                 .accordion-icon {
                   width: u.rem(20);
                 }
-
-                .icon-web {
-                  @media (max-width: 767px) {
-                    display: none; /* Hide the open icon in mobile view */
-                  }
-                }
-
-                .icon-mobile {
-                  @media (min-width: 768px) {
-                    display: none; /* Hide the close icon in web view */
-                  }
-                  @media (max-width: 767px) {
-                    display: none; /* Hide the open icon in mobile view */
-                  }
-                }
               }
 
               .accordion-content {
-                display: none;
+                //display: none;
                 padding: 10px;
+                @include u.breakpoint-max(medium) {
+                  padding: 0 10px 20px 0;
+                }
               }
+            }
+          }
+        }
+      }
+    }
+
+    &.contact-us {
+      background: transparent
+        linear-gradient(90deg, #f2fff800 0%, #f2fff88b 34%, #f2fff8 100%) 0% 0%
+        no-repeat padding-box;
+      @include u.breakpoint-max(medium) {
+        padding-top: u.rem(40);
+        padding-bottom: u.rem(40);
+      }
+
+      h3 {
+        font-size: u.rem(32);
+        font-weight: 500;
+        letter-spacing: u.rem(0.64);
+        line-height: u.rem(45);
+        color: 000;
+
+        @include u.breakpoint-max(medium) {
+          text-align: center;
+        }
+      }
+      a.qoute,
+      input[type="submit"] {
+        font-size: u.rem(14);
+        font-weight: 500;
+        letter-spacing: u.rem(0.7);
+        line-height: u.rem(22);
+        background-color: u.$primary-color;
+        padding: u.rem(13) u.rem(40);
+        text-decoration: none;
+        color: u.$background-color;
+        border-radius: u.rem(42);
+        display: inline-block;
+
+        @include u.breakpoint-max(medium) {
+          width: 90%;
+        }
+      }
+      .contact-us-wrapper {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+
+        & > div {
+          width: 50%;
+          @include u.breakpoint-max(medium) {
+            width: 100%;
+          }
+        }
+
+        .ads {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .upper-part {
+            @include u.breakpoint-max(medium) {
+              text-align: center;
+              margin-bottom: u.rem(50);
+            }
+            h3 {
+              max-width: u.rem(365);
+              @include u.breakpoint-max(medium) {
+                max-width: 100%;
+              }
+            }
+            a {
+              margin-top: u.rem(20);
+            }
+          }
+          .lower-part {
+            text-align: center;
+            max-width: 90%;
+            width: 100%;
+            @include u.breakpoint-max(medium) {
+              max-width: unset;
+            }
+            p {
+              font-size: u.rem(14);
+              letter-spacing: u.rem(0.7);
+              line-height: u.rem(22);
+              font-weight: 500;
+              margin-bottom: u.rem(25);
+            }
+            ul {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: u.rem(10);
+              li {
+                width: 32%;
+                @include u.breakpoint-max(medium) {
+                  width: 31.3%;
+                }
+                a {
+                  display: block;
+                  width: 80%;
+                  @include u.breakpoint-max(medium) {
+                    width: 95%;
+                    margin: 0 auto;
+                  }
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+          @include u.breakpoint-max(medium) {
+            margin-bottom: u.rem(30);
+          }
+        }
+        .form-group {
+          form {
+            margin-top: u.rem(20);
+            display: flex;
+            flex-direction: column;
+            gap: u.rem(10);
+
+            position: relative;
+
+            input:not([type="submit"]),
+            select,
+            textarea {
+              width: 100%;
+              background-color: u.$background-color;
+              border: 1px solid #15bb6633;
+              padding: u.rem(18) u.rem(20);
+              border-radius: u.rem(12);
+
+              font-size: u.rem(14);
+              font-weight: 300;
+              letter-spacing: u.rem(0.7);
+              line-height: u.rem(22);
+
+              &:focus {
+                outline: none !important;
+              }
+
+              &::placeholder {
+                color: #b2b2b2;
+              }
+            }
+            select {
+              &:required:invalid {
+                color: #b2b2b2;
+                option {
+                  color: black;
+                  &[value=""][disabled] {
+                    display: none;
+                  }
+                }
+              }
+            }
+
+            input[type="submit"] {
+              border: none;
+              width: max-content;
+              margin-top: u.rem(33);
+              @include u.breakpoint-max(medium) {
+                width: 100%;
+                margin: 0 auto;
+                margin-top: u.rem(10);
+              }
+            }
+
+            #confirmationMessage {
+              position: absolute;
+              background: rgb(243 255 248 / 30%);
+              top: 0;
+              bottom: 0;
+              right: 0;
+              left: 0;
+              //display: flex;
+              align-items: center;
+              justify-content: center;
+              text-align: center;
+              border-radius: 20px;
+              padding: 20px;
+              backdrop-filter: blur(6px);
             }
           }
         }

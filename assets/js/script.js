@@ -156,38 +156,75 @@ $(document).ready(function () {
   $accordionItems.each(function (index) {
     const $title = $(this).find(".accordion-title");
     const $content = $(this).find(".accordion-content");
-    const $iconWeb = $title.find(".icon-web");
 
-    // Set the first accordion to be open by default
+    // Set the first accordion to be  open by default
     if (index === 0) {
-      $iconWeb
-        .attr("src", "./assets/images/faq/arrow-up-web.svg")
-        .attr("alt", "Open");
       $content.slideDown();
     } else {
-      $iconWeb
-        .attr("src", "./assets/images/faq/arrow-down-web.svg")
-        .attr("alt", "Closed");
-      $content.hide();
+      $content.slideUp();
     }
 
     $title.on("click", function () {
       const $currentItem = $(this).parent(".accordion-item");
 
       if (!$currentItem.hasClass("open")) {
-        $accordionItems
-          .removeClass("open")
-          .find(".icon-web")
-          .attr("src", "./assets/images/faq/arrow-down-web.svg")
-          .attr("alt", "Closed");
+        $accordionItems.removeClass("open");
         $(".accordion-content").slideUp();
-
         $currentItem.addClass("open");
-        $iconWeb
-          .attr("src", "./assets/images/faq/arrow-up-web.svg")
-          .attr("alt", "Open");
         $content.slideDown();
       }
     });
+  });
+});
+
+$(document).ready(function () {
+  $("#myForm").submit(function (e) {
+    e.preventDefault();
+
+    // Collect form data
+    const fullName = $("input[name='full-name']").val();
+    const email = $("input[name='email']").val();
+    const website = $("input[name='website']").val();
+    const budget = $("select[name='budget'] option:selected").text(); // Fetch the selected option's text
+    const message = $("textarea[name='message']").val();
+
+    // Create a JavaScript object with the form data
+    const formData = {
+      fullName: fullName,
+      email: email,
+      website: website,
+      budget: budget,
+      message: message,
+    };
+
+    // Send the form data to the PHP script using AJAX
+    $.ajax({
+      type: "POST",
+      url: "save_form_data.php",
+      data: formData,
+      success: function (response) {
+        // Show the confirmation message to the user
+        $("#confirmationMessage").css("display", "flex");
+
+        setTimeout(function () {
+          $(".loading").hide();
+          $(".load-text").show();
+          setTimeout(function () {
+            $("#confirmationMessage").css("display", "none");
+            $(".loading").show();
+            $(".load-text").hide();
+          }, 2000);
+        }, 3000);
+
+        // Hide the form after showing the confirmation message
+      },
+      error: function (error) {
+        console.error("Error saving data:", error);
+        // You can handle the error and show an error message here
+      },
+    });
+
+    // Clear the form fields after submission (optional)
+    $("#myForm")[0].reset();
   });
 });
