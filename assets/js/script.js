@@ -1,3 +1,5 @@
+AOS.init();
+
 //######### menu on click #########
 $("#burgerMenu").click(function () {
   $(".menu").slideToggle();

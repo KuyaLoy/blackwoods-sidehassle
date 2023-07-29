@@ -62,3 +62,15 @@
   width: 100%;
   margin: 0 auto;
 }
+
+@keyframes bannerImgBounce {
+  0% {
+    -webkit-transform: translateY(0) translateX(0);
+    transform: translateY(0) translateX(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-20px) translateX(-20px);
+    transform: translateY(-20px) translateX(-20px);
+  }
+}

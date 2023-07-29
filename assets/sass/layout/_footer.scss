@@ -15,12 +15,15 @@ footer {
     line-height: u.rem(22);
     letter-spacing: u.rem(0.7);
 
-    padding: u.rem(60) u.rem(25);
+    padding: u.rem(60) 0;
 
     border-bottom: 1px solid #a1e4c2;
 
     @include u.breakpoint-max(medium) {
       grid-template-columns: 100%;
+      padding: u.rem(60) u.rem(20);
+      padding-bottom: u.rem(0);
+      border-bottom: unset;
     }
 
     * {
@@ -170,6 +173,10 @@ footer {
         .footer-contact {
           display: block;
           margin-top: u.rem(30);
+
+          @include u.breakpoint-max(medium) {
+            border-bottom: 1px solid #a1e4c2;
+          }
           ul {
             li {
               a {
@@ -189,12 +196,15 @@ footer {
     }
   }
   .support-wrapper {
-    padding: u.rem(20) u.rem(25);
+    padding: u.rem(20) 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
 
+    @include u.breakpoint-max(medium) {
+      padding: u.rem(20) u.rem(25);
+    }
     p {
       font-size: u.rem(14);
       letter-spacing: u.rem(0.7);
@@ -210,6 +220,10 @@ footer {
     ul {
       @include u.breakpoint-max(medium) {
         margin-top: u.rem(20);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
       }
       li {
         display: inline-block;
@@ -239,12 +253,22 @@ footer {
       font-size: u.rem(14);
 
       ul {
+        @include u.breakpoint-max(small) {
+          width: 100%;
+        }
         li {
           display: inline-block;
-          padding: 0 u.rem(10);
 
-          &:not(:last-child) {
+          @include u.breakpoint-max(medium) {
+            margin-top: u.rem(15);
+          }
+
+          &:first-child {
             border-right: 1px solid #b2b2b2;
+            padding-right: u.rem(15);
+          }
+          &:last-child {
+            padding-left: u.rem(15);
           }
           a {
             color: #b2b2b2;

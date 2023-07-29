@@ -483,6 +483,8 @@ main {
             border-radius: u.rem(24);
             color: #000;
 
+            animation: bannerImgBounce 5s ease-in-out 0s infinite alternate;
+
             @include u.breakpoint-max(medium) {
               padding: u.rem(75) u.rem(50) u.rem(22) u.rem(50);
               text-align: center;
@@ -692,6 +694,9 @@ main {
                     position: absolute;
                     bottom: u.rem(-75);
                     width: 45%;
+                    animation: bannerImgBounce 5s ease-in-out 0s infinite
+                      alternate;
+
                     @media (max-width: u.rem(1200)) {
                       position: relative;
                       width: 100%;
