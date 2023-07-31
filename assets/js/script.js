@@ -1,4 +1,4 @@
-AOS.init();
+AOS.init({ disable: "mobile" });
 
 //######### menu on click #########
 $("#burgerMenu").click(function () {
@@ -15,6 +15,43 @@ window.onscroll = () => {
   }
 };
 
+$(document).ready(function () {
+  // Define specific offsets for each section (customize these as needed)
+  const sectionOffsets = {
+    Services: 100,
+    Industries: 100,
+    Company: 100,
+    FAQ: 100,
+    "Contact-Us": 100,
+  };
+
+  // Function to add "active" class to the menu item based on scroll position
+  function setActiveMenuItem() {
+    const scrollPosition = $(window).scrollTop();
+
+    $("ul.menu li a").each(function () {
+      const target = $(this).attr("href");
+      if (target.startsWith("#")) {
+        const targetElement = $(target);
+        if (targetElement.length) {
+          const sectionId = target.substring(1); // Remove the "#" to get the section ID
+          const offset = sectionOffsets[sectionId] || 0; // Use the specific offset or fallback to 0
+
+          const sectionTop = targetElement.offset().top - offset;
+          const sectionBottom = sectionTop + targetElement.outerHeight();
+
+          if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+            $("ul.menu li").removeClass("active");
+            $(this).parent().addClass("active");
+          }
+        }
+      }
+    });
+  }
+
+  // Attach scroll event handler to add "active" class to the menu item when scrolling
+  $(window).on("scroll", setActiveMenuItem);
+});
 //######### services-wrapper #########
 let oldHeight1;
 $(document).ready(function () {
