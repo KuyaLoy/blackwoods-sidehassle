@@ -1750,6 +1750,12 @@ main section.strategy .agency .agency-cont .text-cont p {
     text-align: center;
   }
 }
+main section.faq {
+  background-image: url(../images/faq/bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
 main section.faq .faq-main-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;

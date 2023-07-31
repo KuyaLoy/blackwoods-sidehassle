@@ -918,6 +918,10 @@ main {
       }
     }
     &.faq {
+      background-image: url(../images/faq/bg.png);
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: top center;
       .faq-main-wrapper {
         display: flex;
         justify-content: center;
