@@ -98,7 +98,7 @@ $(document).ready(function () {
   } else if ($(window).width() < 1139.98) {
     offerWrapper = offerWrapper.height((55 / 100) * offerWrapperHeight);
   } else {
-    offerWrapper = offerWrapper.height((78 / 100) * offerWrapperHeight);
+    offerWrapper = offerWrapper.height((75 / 100) * offerWrapperHeight);
   }
 });
 
