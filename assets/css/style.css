@@ -65,7 +65,6 @@ table {
   color: var(--secondary-colorr);
   letter-spacing: 0.05625rem;
   line-height: 3.75rem;
-  font-family: "Poppins", sans-serif;
   font-weight: 500;
 }
 @media (max-width: 56.24875em) {
@@ -82,7 +81,6 @@ table {
   color: var(--secondary-colorr);
   letter-spacing: 0.04375rem;
   line-height: 1.375rem;
-  font-family: "Poppins", sans-serif;
   font-weight: 300;
 }
 .common-description.left {
@@ -179,6 +177,7 @@ html {
 *::after {
   -webkit-box-sizing: inherit;
           box-sizing: inherit;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
@@ -2029,7 +2028,6 @@ main section.contact-us .contact-us-wrapper .form-group form textarea {
   font-weight: 300;
   letter-spacing: 0.04375rem;
   line-height: 1.375rem;
-  font-family: "Poppins", sans-serif !important;
 }
 main section.contact-us .contact-us-wrapper .form-group form input:not([type=submit]):focus,
 main section.contact-us .contact-us-wrapper .form-group form select:focus,
@@ -2052,6 +2050,14 @@ main section.contact-us .contact-us-wrapper .form-group form input:not([type=sub
 main section.contact-us .contact-us-wrapper .form-group form select::placeholder,
 main section.contact-us .contact-us-wrapper .form-group form textarea::placeholder {
   color: #b2b2b2;
+}
+main section.contact-us .contact-us-wrapper .form-group form select {
+  -webkit-appearance: none;
+  -moz-appearance: window;
+  background-image: url("../images/form/arrow-down.svg");
+  background-repeat: no-repeat;
+  background-size: 1.25rem;
+  background-position: 97.5% center;
 }
 main section.contact-us .contact-us-wrapper .form-group form select:required:invalid {
   color: #b2b2b2;

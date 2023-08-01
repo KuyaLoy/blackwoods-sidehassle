@@ -6,7 +6,6 @@
   color: u.$text-color;
   letter-spacing: u.rem(0.9);
   line-height: u.rem(60);
-  font-family: "Poppins", sans-serif;
   font-weight: 500;
 
   @include u.breakpoint-max(medium) {
@@ -22,7 +21,6 @@
   color: u.$text-color;
   letter-spacing: u.rem(0.7);
   line-height: u.rem(22);
-  font-family: "Poppins", sans-serif;
   font-weight: 300;
 
   &.left {

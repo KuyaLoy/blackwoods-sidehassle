@@ -1162,7 +1162,6 @@ main {
               font-weight: 300;
               letter-spacing: u.rem(0.7);
               line-height: u.rem(22);
-              font-family: "Poppins", sans-serif !important;
 
               &:focus {
                 outline: none !important;
@@ -1173,6 +1172,17 @@ main {
               }
             }
             select {
+              -webkit-appearance: none;
+              -moz-appearance: window;
+              background-image: url("../images/form/arrow-down.svg");
+              background-repeat: no-repeat;
+              background-size: u.rem(20);
+              background-position: 97.5% center;
+
+              // &:focus {
+              //   background-image: url("../images/faq/arrow-up.svg");
+              // }
+
               &:required:invalid {
                 color: #b2b2b2;
                 option {
