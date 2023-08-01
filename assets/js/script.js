@@ -267,3 +267,8 @@ $(document).ready(function () {
     $("#myForm")[0].reset();
   });
 });
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}

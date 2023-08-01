@@ -1,6 +1,6 @@
 @use "../utils" as u;
 
-main {
+main.homepage {
   background-image: url(../images/hero/hero-bg.jpg);
   background-size: contain;
   background-position: top;
@@ -238,6 +238,10 @@ main {
           border-left: 1px solid u.$primary-color;
           margin-left: -2px;
           margin-bottom: -2px;
+
+          text-decoration: none;
+
+          color: #000;
           .inner-cont {
             padding: u.rem(40) u.rem(20);
             h3 {
