@@ -186,7 +186,6 @@ body {
   padding: 0;
   background-color: var(--background-color);
   color: var(--text-color);
-  scroll-behavior: smooth;
   font-family: "Poppins", sans-serif;
 }
 
@@ -2030,6 +2029,7 @@ main section.contact-us .contact-us-wrapper .form-group form textarea {
   font-weight: 300;
   letter-spacing: 0.04375rem;
   line-height: 1.375rem;
+  font-family: "Poppins", sans-serif !important;
 }
 main section.contact-us .contact-us-wrapper .form-group form input:not([type=submit]):focus,
 main section.contact-us .contact-us-wrapper .form-group form select:focus,
