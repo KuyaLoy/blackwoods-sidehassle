@@ -1176,8 +1176,7 @@ main.homepage {
               }
             }
             select {
-              -webkit-appearance: none;
-              -moz-appearance: window;
+              appearance: none;
               background-image: url("../images/form/arrow-down.svg");
               background-repeat: no-repeat;
               background-size: u.rem(20);

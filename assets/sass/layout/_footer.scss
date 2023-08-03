@@ -216,7 +216,7 @@ footer {
     border-bottom: 1px solid #a1e4c2;
 
     display: grid;
-    grid-template-columns: 30% 70%;
+    grid-template-columns: 20% 80%;
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
@@ -255,6 +255,9 @@ footer {
             display: flex;
             align-items: center;
             text-decoration: none;
+            font-size: u.rem(14);
+            letter-spacing: u.rem(0.7);
+            line-height: u.rem(22);
             img {
               width: u.rem(20);
               height: u.rem(20);
@@ -270,7 +273,7 @@ footer {
     .office-location {
       .ol-wrapper {
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(6, 1fr);
         grid-template-rows: 1fr;
         grid-column-gap: 20px;
         grid-row-gap: 20px;
@@ -286,8 +289,8 @@ footer {
           margin-bottom: u.rem(5);
           display: block;
           img {
-            width: u.rem(30);
-            height: u.rem(30);
+            width: u.rem(40);
+            height: u.rem(40);
           }
         }
         .city {
