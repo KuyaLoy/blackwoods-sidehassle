@@ -145,7 +145,7 @@ setActiveTab();
 //######### agency #########
 $(document).ready(function () {
   var ulCount = 3;
-  var imageCount = 21;
+  var imageCount = 16;
   var ulContainer = $(".icons-cont");
 
   for (var i = 0; i < ulCount; i++) {

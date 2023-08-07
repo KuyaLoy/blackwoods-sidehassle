@@ -849,14 +849,16 @@ main.homepage {
               column-gap: u.rem(24);
               gap: u.rem(24);
               li {
-                width: calc(100 / 10);
+                //width: calc(100 / 10);
+                display: flex;
+                align-items: center;
                 padding: u.rem(15);
                 background-color: rgba(255, 255, 255, 0.4);
                 backdrop-filter: blur(u.rem(5));
                 border-radius: u.rem(12);
                 img {
-                  width: u.rem(32);
-                  height: u.rem(32);
+                  width: u.rem(150);
+                  height: u.rem(35);
                 }
               }
 
